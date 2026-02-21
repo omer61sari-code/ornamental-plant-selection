@@ -44,6 +44,7 @@ To ensure consistent inference results, the pipeline assumes:
 - One-hot encoded categorical variables  
 - Z-score normalization of numerical variables  
 - Exact feature alignment using `model_training_columns.csv`
+- Feature names remain in their original language to preserve exact alignment with the trained model structure.
 
 ---
 
