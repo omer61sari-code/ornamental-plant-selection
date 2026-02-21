@@ -1,37 +1,64 @@
-# ornamental-plant-selection
-Hybrid CNN–Morphometric Fusion Framework for Ornamental Plant Selection
-# Hybrid CNN–Morphometric Fusion Framework for Ornamental Plant Selection
+# Ornamental Plant Selection  
+## Hybrid CNN–Morphometric Fusion Framework
 
 This repository contains the inference pipeline supporting the study:
 
 "A Hybrid CNN–Morphometric Fusion Framework for Automated Commercial Categorization of Ornamental Plants"
 
+---
+
 ## Overview
 
-The system integrates:
+This system implements a hybrid decision framework that integrates:
 
-- Dual-view CNN processing (front & top images)
+- Dual-view CNN processing (front and top plant images)
 - Morphometric feature preprocessing
-- Feature alignment to trained model structure (92 features)
+- Structured feature alignment
 - Expert-weighted score fusion
 - Category-based commercial ranking
 
+The framework combines deep learning predictions with domain-based botanical scoring to support automated ornamental plant categorization.
+
+---
+
 ## Model Inputs
 
-1. Front view RGB image (224×224)
-2. Top view RGB image (224×224)
-3. 92-dimensional aligned morphometric feature vector
+The trained model expects:
 
-## Reproducibility
+- Front view RGB image (224 × 224)
+- Top view RGB image (224 × 224)
+- 92-dimensional aligned morphometric feature vector
 
-The model expects:
+---
+
+## Preprocessing Requirements
+
+To ensure reproducibility, the pipeline requires:
 
 - One-hot encoded categorical variables
 - Z-score normalized numerical variables
-- Exact feature alignment using model_columns.csv
+- Exact feature alignment using `model_training_columns.csv`
+
+---
+
+## Output
+
+The system produces:
+
+- Category-level classification
+- Weighted ranking scores
+- Excel-based export of final commercial categorization
+
+---
 
 ## Code Availability
 
 This repository provides the inference and preprocessing pipeline used in the published study.
-Model weights are available upon request.
 
+Pre-trained model weights are not included in this repository due to intellectual property considerations. They may be available upon reasonable request.
+
+---
+
+## License
+
+This project is licensed under the Apache License 2.0.
