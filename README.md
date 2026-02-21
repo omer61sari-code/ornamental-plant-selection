@@ -1,42 +1,48 @@
 # Ornamental Plant Selection  
 ## Hybrid CNN–Morphometric Fusion Framework
 
-This repository contains the inference pipeline supporting the study:
+This repository contains the inference and preprocessing pipeline supporting the study:
 
 "A Hybrid CNN–Morphometric Fusion Framework for Automated Commercial Categorization of Ornamental Plants"
 
 ---
 
-## Overview
+## Abstract
 
-This system implements a hybrid decision framework that integrates:
+This study proposes a hybrid decision framework that integrates deep convolutional neural networks with structured morphometric features for automated ornamental plant categorization. The system combines image-based representation learning with expert-informed botanical scoring to improve commercial classification reliability.
 
-- Dual-view CNN processing (front and top plant images)
-- Morphometric feature preprocessing
-- Structured feature alignment
-- Expert-weighted score fusion
-- Category-based commercial ranking
+---
 
-The framework combines deep learning predictions with domain-based botanical scoring to support automated ornamental plant categorization.
+## Methodological Framework
+
+The proposed framework integrates:
+
+- Dual-view CNN processing (front and top RGB images)
+- Morphometric feature preprocessing and normalization
+- Feature-space alignment to trained model structure
+- Expert-weighted score fusion mechanism
+- Category-based ranking and selection
+
+This hybrid approach enables structured feature fusion between visual and morphometric domains.
 
 ---
 
 ## Model Inputs
 
-The trained model expects:
+The trained model requires:
 
-- Front view RGB image (224 × 224)
-- Top view RGB image (224 × 224)
+- Front-view RGB image (224 × 224)
+- Top-view RGB image (224 × 224)
 - 92-dimensional aligned morphometric feature vector
 
 ---
 
-## Preprocessing Requirements
+## Reproducibility Requirements
 
-To ensure reproducibility, the pipeline requires:
+To ensure consistent inference results, the pipeline assumes:
 
-- One-hot encoded categorical variables
-- Z-score normalized numerical variables
+- One-hot encoded categorical variables  
+- Z-score normalization of numerical variables  
 - Exact feature alignment using `model_training_columns.csv`
 
 ---
@@ -45,17 +51,17 @@ To ensure reproducibility, the pipeline requires:
 
 The system produces:
 
-- Category-level classification
-- Weighted ranking scores
-- Excel-based export of final commercial categorization
+- Predicted commercial category  
+- Weighted fusion score  
+- Excel-based ranked output  
 
 ---
 
 ## Code Availability
 
-This repository provides the inference and preprocessing pipeline used in the published study.
+This repository provides the preprocessing and inference pipeline used in the study.
 
-Pre-trained model weights are not included in this repository due to intellectual property considerations. They may be available upon reasonable request.
+Pre-trained model weights and dataset are not included due to intellectual property considerations. They may be made available upon reasonable academic request.
 
 ---
 
